@@ -1,18 +1,40 @@
 package social;
 
+import it.unibs.fp.mylib.InputDati;
+
 public class Calcio extends Categoria {
 	
 	//dichiarazione delle variabili
 	private char sesso;
 	private int età_min;
 	private int età_max;
-	String CONST="Sesso utente=%c\nRange età utente(%d-%d)";
-	
+	private String CONST="Sesso utente=%c\nRange età utente(%d-%d)";
+	private String nomeCat="Calcio";
 	
 	//costruttore vuoto 
 	public Calcio ()
 	{
 	
+	}
+	
+	//costuttore per inizializzare le caratteristiche specifiche della categoria calcio
+	public Calcio(char sesso,int min,int max) {
+		super();
+		this.nome_cat=nomeCat;
+		this.titolo=InputDati.leggiStringa("Inserisci titolo(facolatitivo)");
+		this.numero_partecipanti=InputDati.leggiInteroPositivo("Inserire numero partecipanti(obl)");
+		this.anno_i=InputDati.leggiInteroPositivo("inserire anno inizio evento");
+		this.mese_i=InputDati.leggiInteroPositivo("inserire mese inizio evento");
+		this.giorno_i=InputDati.leggiInteroPositivo("inserire giorno inizio evento");
+		this.luogo=InputDati.leggiStringaNonVuota("inserire luogo dell'evento");
+		this.anno_t=InputDati.leggiInteroPositivo("inserire anno fine evento");
+		this.mese_t=InputDati.leggiInteroPositivo("inserire mese fine evento");
+		this.giorno_t=InputDati.leggiInteroPositivo("inserire giorno fine evento");
+		//ecc..
+		this.sesso=InputDati.leggiChar("inserire sesso utente");
+		this.età_min=min;
+		this.età_max=max;
+		
 	}
 	
 	//stampa caratteristiche specifiche della categoria calcio

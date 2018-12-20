@@ -30,6 +30,7 @@ public class Categoria
 	{
 		  
 	}
+	
 	public Categoria(String nomeCat,String _titolo,int numeroP,int annoT,int meseT,int giornoT,String _luogo,
 			          int annoI,int meseI, int giornoI,int _ora ,int _minuti,int _durata,float _quota, String _extra,
 			          int annoF, int meseF,int giornoF,int oraConclusione, int minutiConclusione,String _note)
